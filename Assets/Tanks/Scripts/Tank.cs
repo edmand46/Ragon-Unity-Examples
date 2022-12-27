@@ -31,7 +31,7 @@ namespace Mirror.Examples.Tanks
       if (IsMine)
       {
         var payload = Entity.GetSpawnPayload<TankPayload>();
-        _position.Value = payload.Position;
+        transform.position = payload.Position;
         
         FindObjectOfType<FollowCamera>().SetFollow(transform);
       }
